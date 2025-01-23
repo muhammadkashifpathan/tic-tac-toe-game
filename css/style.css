@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+header {
+    background-color: rgb(19, 19, 19);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 0 5px rgb(66, 66, 66);
+    height: 76px;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: 900;
+    font-style: italic;
+    text-shadow: 0 0 5px rgb(0, 255, 0);
+}
+
+header .winner-container {
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(0, 255, 0);
+    text-shadow: 0 0 5px rgb(0, 255, 0);
+}
+
+header .winner-container .win-games {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid rgb(19, 19, 19);
+}
+
+header .winner-container .winner-players div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+header .winner-container .winner-players div span {
+    color: rgb(0, 255, 0);
+    font-size: 18px;
+    font-weight: 900;
+    text-shadow: 2px 2px 5px rgb(0, 255, 0);
+
+}
+
+header .winner-container .draw-games div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .winner-container .draw-games div>span {
+    color: red;
+    font-size: 18px;
+    text-shadow: 2px 2px 5px red;
+    font-weight: 900;
+}
+
+main {
+    height: calc(100vh - 76px);
+    width: 100vw;
+    display: grid;
+    align-items: center;
+}
+main .container {
+    text-align: center;
+}
+main .container h1 {
+    margin: 10px 0;
+}
+
+main .container .game {
+    background-color: rgb(11, 11, 11);
+    width: 50vmin;
+    height: 50vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    gap: 10px;
+    padding: 20px;
+    grid-template-columns: auto auto auto;
+    box-shadow: 0 0 10px rgb(111, 111, 111);
+    border-radius: 10px;
+}
+
+main .container .game .box {
+    height: 30%;
+    width: 30%;
+    font-size: 35px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    border: none;
+}
+
+main .container .reset-game-btn {
+    background-color: rgb(19, 19, 19);
+    padding: 5px 10px;
+    font-size: 20px;
+    color: rgb(253, 144, 144);
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 0 5px rgb(253, 144, 144);
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+main .container .reset-game-btn:hover {
+    background-color: rgb(253, 144, 144);
+    color: rgb(19, 19, 19);
+}
+
+main .show-winner-container {
+    background-color: black;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 5px rgb(0, 255, 0);
+    text-shadow: 0 0 5px rgb(0, 255, 0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+main .show-winner-container .show-winner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    gap: 20px;
+    background-color: rgb(11, 11, 11);
+    box-shadow: 0 0 10px rgb(111, 111, 111);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+main .show-winner-container .show-winner div span {
+    color: rgb(0, 255, 0);
+    font-weight: 900;
+}
+
+main .show-winner-container button {
+    background-color: rgb(19, 19, 19);
+    padding: 5px 10px;
+    font-size: 20px;
+    color: rgb(144, 253, 155);
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 0 5px rgb(144, 253, 155);
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+main .show-winner-container button:hover {
+    background-color: rgb(144, 253, 155);
+    color: rgb(19, 19, 19);
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+    header .winner-container {
+        font-size: 10px;
+    }
+    header .winner-container .winner-players div span {
+        font-size: 16px;
+    }
+    main .container .game {
+        width: 90vmin;
+        height: 90vmin;
+        margin: 20px auto;
+    }
+
+    main .show-winner-container {
+        width: 80%;
+    }
+}

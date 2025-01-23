@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game - Muhammad Kashif Pathan</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Tic Tac Toe</div>
+        <div class="winner-container">
+            <div class="win-games">
+                <div class="win">Total Won Games</div>
+                <div class="winner-players">
+                    <div>Player O: <span id="playerO">0</span></div>
+                    <div>Player X: <span id="playerX">0</span></div>
+                </div>
+            </div>
+            <div class="draw-games">
+                <div class="drew playerO">Total Drew Game: <span id="drew-games">0</span></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Tic Tac Toe</h1>
+            <div class="game">
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+            </div>
+            <button class="reset-game-btn" id="resetBtn">Reset</button>
+        </div>
+
+        <div class="show-winner-container hide">
+            <div class="show-winner">
+                <div class="winner-text">PLAYER <span>O</span> Wins</div>
+                <button class="play-again-btn" id="newGameBtn">Play Again</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
